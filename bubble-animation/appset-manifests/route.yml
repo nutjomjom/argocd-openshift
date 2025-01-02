@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: bubble-animation
+  namespace: bubble-animation
+spec:
+  to:
+    kind: Service
+    name: bubble-animation
+  port:
+    targetPort: 8080
