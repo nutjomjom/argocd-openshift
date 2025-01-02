@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app-placeholder
+  name: app-placeholder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-placeholder
+  template:
+    metadata:
+      labels:
+        app: app-placeholder
+    spec:
+      containers:
+        - name: test
+          image: busybox
+          command: ["sh", "-c"]
+          args:
+            - while true; do echo "{{MESSAGE}}"; sleep 1000; done;
+          env:
+            - name: MESSAGE
+              value: "default message"

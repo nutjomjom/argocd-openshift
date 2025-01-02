@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1
+  namespace: app1
+spec:
+  template:
+    spec:
+      containers:
+        - name: app
+          env:
+            - name: MESSAGE
+              value: "hello from app1"
