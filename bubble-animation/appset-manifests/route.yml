@@ -1,11 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: bubble-animation
+  name: bubble-animation-{{ .Values.color }}
   namespace: bubble-animation
 spec:
-  to:
-    kind: Service
-    name: bubble-animation
   port:
     targetPort: 8080
+  to:
+    kind: Service
+    name: bubble-animation-{{ .Values.color }}
