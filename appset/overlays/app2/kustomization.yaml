@@ -1,5 +1,5 @@
 namespace: app2
-bases:
+resources:
   - ../../base
-patchesStrategicMerge:
+patches:
   - deployment.yaml
