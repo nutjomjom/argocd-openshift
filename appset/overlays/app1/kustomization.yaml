@@ -6,5 +6,5 @@ patches:
       group: apps
       version: v1
       kind: Deployment
-      name: app
+      name: app1
     path: deployment.yaml
