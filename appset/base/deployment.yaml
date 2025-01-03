@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
         - name: test
-          image: busybox
+          image: alpine
           command: ["sh", "-c"]
           args:
-            - while true; do echo "{{MESSAGE}}"; sleep 1000; done;
+            - while true; do echo "$MESSAGE"; sleep 2; done;
           env:
             - name: MESSAGE
               value: "default message"
