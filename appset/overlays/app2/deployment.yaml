@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - name: app
+        - name: app2
           env:
             - name: MESSAGE
               value: "hello from app2"

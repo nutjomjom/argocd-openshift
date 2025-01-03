@@ -15,7 +15,7 @@ spec:
         app: appset
     spec:
       containers:
-        - name: test
+        - name: app
           image: alpine
           command: ["sh", "-c"]
           args:
