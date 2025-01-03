@@ -8,7 +8,6 @@ spec:
     spec:
       containers:
         - name: app1
-          image: alpine
           env:
             - name: MESSAGE
               value: "hello from app1"
